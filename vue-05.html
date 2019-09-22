@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div v-if="role ==&apos;admin&apos;|| role ==&apos;super_admin&apos;">管理员密码</div>
+        <div v-else-if="role == &apos;hr&apos;">
+            待查看简历列表: <br>
+            .....
+        </div>
+        <div v-else>
+            你没有权限访问页面
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="v-if.js"></script>
+</body>
+</html>
