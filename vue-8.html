@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    .liked{
+        background:rgb(51, 160, 233);
+    }
+</style>
+</head>
+<body>
+    <div id="app">
+        <like></like>
+        <like></like>
+        <like></like>
+    </div>
+    <template id='like-component-tpl'>
+            <button :class="{liked:liked}" @click="toggle_like()">
+                    {{like_count}}
+            </button>
+    </template>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="component02.js"></script>
+</body>
+</html>
