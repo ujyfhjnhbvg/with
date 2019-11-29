@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        .panel{
+            max-width: 300px;
+            border: 1px solid #999;
+            margin-bottom: 15px;
+            
+        }
+        .panel .title{
+            border-bottom: 1px solid rgb(55, 182, 221);
+
+        }
+        .panel .footer{
+            border-top: 1px solid #999;
+            text-align:right;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"> 
+        <panel>
+                <div slot="title">
+                    Vue这是标题栏
+                </div>
+                <div slot="content">
+                </div>
+        </panel>
+        <panel></panel>
+        <panel>
+            <div slot="title">
+            </div>
+            <div slot="content">
+            </div>
+        </panel>
+    </div > 
+
+    <template id="panel-tpl">
+        <div class="panel">
+                <div class="title">
+                    <slot name="title"></slot>
+                </div>
+                <div class="content">
+                    <slot name="content"></slot>
+                </div>
+                <div class="footer">more>></div>
+        </div>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="slots.js"></script>
+</body>
+</html>
